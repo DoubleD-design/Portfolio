@@ -1,0 +1,140 @@
+:root {
+    --mint: #00FFFF;
+    --mint-l: #7AFFFF;
+    --black-blue: #222831;
+    --black: #000;
+    --gray: #393E46;
+    --white: #FFFFFF;
+    --smooth: all 0.3s ease-in;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    text-align: center;
+    outline: none;
+    border: none;
+    padding: .8rem 2.5rem;
+    border-radius: 100px;
+    background-color: var(--mint);
+    color: var(--white);
+    transition: var(--smooth);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--mint-l);
+    color: var(--black-blue);
+    transition: var(--smooth);
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+}
+
+.container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__links{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-color: var(--gray);
+    z-index: 5;
+    /* transition: var(--smooth);
+    transform: translateX(-100%);
+    opacity: 0; */
+}
+
+.navbar__link{
+    list-style: none;
+    padding: 55px;
+}
+
+.navbar__link a{
+    margin: 55;
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--white);
+    transition: var(--white);
+}
+
+.navbar__button{
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: 45px;
+}
+
+.navbar__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: var(--smooth);
+    z-index: 6;
+}
+
+.navbar__icon{
+    width: 45px;
+    height: 8px;
+    background-color: var(--black);
+    border-radius: 10px;
+    transition: var(--smooth);
+    position: relative;
+}
+
+.navbar__icon::before,
+.navbar__icon::after{
+    content: "";
+    width: 45px;
+    height: 8px;
+    background-color: var(--black);
+    border-radius: 10px;
+    transition: var(--smooth);
+    position: absolute;
+}
+.navbar__icon::before{
+    transform: translateY(12px);
+}
+
+.navbar__icon::after{
+    transform: translateY(-12px);
+}
+
+
+
